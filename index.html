@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styling.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    
+  <!-- Header -->
+  <header class="header">
+    <a href="#home" class="logo"></a>
+    <nav class="navbar">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#portfolio">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+
+
+  <!-- Home Section -->
+  <section class="home" id="home">
+    <div class="home-content">
+      <h3>Hello, It's Me</h3>
+      <h1>Vedant Shelke</h1>
+      <h3>And I'm a <span id="typed"></span></h3>
+    <p class="home-info">
+      I'm a passionate web developer creating responsive and interactive websites.
+      I specialize in turning ideas into digital experiences with clean code and modern design.
+    </p>
+      
+      <div class="home-sci">
+        <a href="https://www.instagram.com/shelke_vedant123?igsh=ZTUwZGNwM28zNjg4"><i class='bx bxl-instagram'></i></a>
+        <a href="#"><i class='bx bxl-whatsapp'></i></a>
+        <a href="https://www.linkedin.com/in/vedant-shelke-a28070327?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class='bx bxl-linkedin'></i></a>
+      </div>
+            
+    </div>
+     
+</section>
+  
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="about-content">
+      <h2 class="heading">About <span>Me</span></h2>
+      <p>
+I'm Vedant Shelke, a passionate web developer who loves creating
+beautiful, functional, and responsive websites. I specialize in
+front-end and back-end development, turning ideas into
+interactive digital experiences. I enjoy solving problems with
+clean code and continuously learning new technologies to enhance
+my skills.
+</p>
+
+
+      
+    </div>
+    <a href="#portfolio" class="btn">View My Projects</a>
+  </section>
+  
+  
+ <!-- Skills Section -->
+<section class="skills" id="skills">
+  <h2 class="heading">My <span>Skills</span></h2>
+  
+  <div class="skills-container">
+    <div class="skill">
+      <h3><i class='bx bxl-html5'></i> HTML</h3>
+      <div class="bar"><span class="html"></span></div>
+    </div>
+    <div class="skill">
+      <h3><i class='bx bxl-css3'></i> CSS</h3>
+      <div class="bar"><span class="css"></span></div>
+    </div>
+    <div class="skill">
+      <h3><i class='bx bxl-javascript'></i> JavaScript</h3>
+      <div class="bar"><span class="javascript"></span></div>
+    </div>
+    <div class="skill">
+      <h3><i class='bx bxl-react'></i> React</h3>
+      <div class="bar"><span class="react"></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio Section -->
+<section class="portfolio" id="portfolio">
+  <h2 class="heading">My <span>Projects</span></h2>
+  
+  <div class="portfolio-container">
+    <div class="portfolio-box">
+     <img src="images\andrea-davis-IWfe63thJxk-unsplash.jpg" alt="Project 3">
+      <div class="portfolio-layer">
+        <h4>WanderLust </h4>
+        <p><b>i have made a clone of Airbnb website which is about booking of motel rooms.</b></p>
+        <a href="https://finalproject-hwgx.onrender.com"><i class='bx bx-link-external'></i></a>
+      </div>
+    </div>
+    <div class="portfolio-box">
+  <img src="images\Screenshot 2025-09-12 013513.png" alt="Coming Soon">
+  <div class="portfolio-layer">
+    <h4>Coming Soon</h4>
+    <p>My next project will appear here!</p>
+    <a href="#"><i class='bx bx-link-external'></i></a>
+  </div>
+</div>
+
+
+    
+  </div>
+</section>
+
+<!-- Resume Section -->
+<section class="resume" id="resume">
+  <h2 class="heading">My <span>Resume</span></h2>
+  
+  <div class="resume-container">
+    <p>You can view or download my resume below:</p>
+    
+    <!-- View PDF button (opens in new tab) -->
+    <a href="files\resume.pdf" target="_blank" class="btn">View Resume</a>
+    
+    <!-- Download PDF button -->
+    <a href="files\resume.pdf" download class="btn">Download Resume</a>
+  </div>
+ 
+
+</section>
+
+<div class="chatbot">
+  <button id="chat-btn"><i class='bx bxs-message-rounded-dots'></i></button>
+  <div id="chat-box">
+    <div id="chat-messages"></div>
+    <textarea id="chat-input" placeholder="Write your message..."></textarea>
+    <button id="send-btn">Send</button>
+  </div>
+</div>
+<button class="menu-btn" id="menu-btn">
+  <i class='bx bx-menu'></i>
+</button>
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+  <h2 class="heading">Contact <span>Me</span></h2>
+
+  <p class="contact-info">
+    <i class='bx bxs-phone'></i> <a href="tel:9130411100">+91 9130411100</a><br>
+    <i class='bx bxs-envelope'></i> <a href="mailto:vedantshelke1100@gmail.com">vedantshelke1100@gmail.com</a>
+  </p>
+</section>
+
+
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

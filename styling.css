@@ -1,0 +1,412 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  color: #ededed;
+  background: #0f172a;
+  overflow-x: hidden; /* prevent horizontal scroll */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  background: transparent;
+}
+
+.logo {
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+
+}
+
+/* Desktop / Laptop Navbar (default) */
+.navbar {
+  display: flex;
+  gap: 20px;
+  position: static;
+  flex-direction: row;
+  background: transparent;
+  padding: 0;
+  transition: none;
+}
+
+.navbar a {
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+  margin: 0;
+}
+
+.navbar a:hover {
+  color: magenta;
+}
+
+/* Hamburger menu button hidden on desktop */
+.menu-btn {
+  display: none;
+}
+
+/* Sections Common */
+section {
+  width: 100%;
+  padding: 80px 10%;
+}
+
+@media screen and (max-width: 650px) {
+  section {
+    padding: 60px 5%;
+  }
+}
+
+/* Home Section */
+.home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 70px;
+  background: linear-gradient(135deg, #0081a7, #00afb9);
+}
+
+.home-content h3 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.home-content h1 {
+  font-size: 52px;
+  font-weight: 700;
+  margin: 5px 0;
+}
+
+.home-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-top:25px;
+}
+
+.home-sci a {
+  display: inline-block;
+  margin: 10px;
+  font-size: 28px;
+  color: #fff;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  padding: 10px;
+  transition: 0.3s;
+  margin-top:50px;
+}
+
+.home-sci a:hover {
+  background: #2575fc;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 650px) {
+  .home-content h1 { font-size: 36px; }
+  .home-content h3 { font-size: 24px; }
+}
+
+
+
+/* About Section */
+.about {
+  text-align: center;
+}
+
+.about .heading {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about .heading span {
+  color: magenta;
+}
+
+.about p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+.about .btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: magenta;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.about .btn:hover {
+  background: #ff00ffcc;
+  transform: scale(1.05);
+}
+
+/* Skills Section */
+.skills {
+  text-align: center;
+}
+
+.skills .heading {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.skills-container {
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+}
+
+.skill {
+  margin-bottom: 25px;
+}
+
+.skill h3 {
+  margin-bottom: 5px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Progress Bars */
+.bar {
+  width: 100%;
+  background: #333;
+  border-radius: 5px;
+}
+
+.bar span {
+  display: block;
+  height: 10px;
+  border-radius: 5px;
+}
+
+.bar .html { width: 90%; background: #e34c26; }
+.bar .css { width: 80%; background: #264de4; }
+.bar .javascript { width: 80%; background: #f0db4f; }
+.bar .react { width: 75%; background: #61dafb; }
+
+.portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  align-items: stretch;
+}
+
+.portfolio-box {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  width: 100%;
+  max-width: 350px;
+  height: 250px;
+}
+
+.portfolio-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.portfolio-layer {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.4s ease;
+  padding: 10px;
+  z-index: 10;
+}
+
+.portfolio-box:hover .portfolio-layer {
+  opacity: 1;
+}
+.portfolio .heading {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom:50px;
+  position: relative;
+  display: inline-block;
+  color: #fff;
+}
+
+.portfolio .heading span {
+  color: magenta;
+}
+
+.portfolio .heading::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: magenta;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Resume Section */
+.resume {
+  text-align: center;
+  background: #1a1a2e;
+}
+
+.resume .heading {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.resume-container p {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.resume-container .btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 25px;
+  background: magenta;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.resume-container .btn:hover { background: #ff00ffcc; }
+
+/* Chatbot */
+.chatbot { position: fixed; bottom: 20px; right: 20px; }
+#chat-box { display: none; position: absolute; bottom: 50px; right: 0; width: 250px; background: #1a1a2e; padding: 10px; border-radius: 8px; color: #fff; }
+#chat-messages { max-height: 150px; overflow-y: auto; margin-bottom: 10px; }
+#chat-input { width: 100%; height: 50px; border-radius: 6px; border: none; padding: 5px; margin-bottom: 5px; resize: none; }
+#send-btn { width: 100%; padding: 8px; background: magenta; border: none; color: #fff; border-radius: 6px; cursor: pointer; }
+#send-btn:hover { background: #ff00ffcc; }
+#chat-btn { background: magenta; border: none; border-radius: 50%; padding: 12px; color: #fff; cursor: pointer; font-size: 24px; display: flex; align-items: center; justify-content: center; }
+#chat-btn:hover { background: #ff00ffcc; }
+
+/* Mobile Adjustments */
+@media screen and (max-width: 650px) {
+  .home-content h1 { font-size: 36px; }
+  .home-content h3 { font-size: 24px; }
+}
+
+/* Mobile (<480px) */
+@media screen and (max-width: 480px) {
+  section { padding: 50px 5%; }
+  .home-content h1 { font-size: 28px; }
+  .home-content h3 { font-size: 20px; }
+  .home-content p { font-size: 16px; }
+  .navbar a { font-size: 14px; }
+  .chatbot { bottom: 10px; right: 10px; }
+  #chat-btn { font-size: 20px; padding: 10px; }
+}
+
+/* Mobile Navbar & Menu Button (<768px) */
+@media screen and (max-width: 768px) {
+  .menu-btn {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 101;
+    background: magenta;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 24px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 200px;
+    padding: 20px;
+    gap: 10px;
+    transition: 0.3s;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+  }
+
+  .navbar.active {
+    right: 10px;
+  }
+
+  .navbar a {
+    margin: 10px 0;
+  }
+}
+.contact {
+  padding: 20px 10%;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.contact .heading {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color:black;
+}
+
+.contact-info {
+  font-size: 1.2rem;
+  line-height: 2;
+}
+
+.contact-info i {
+  color: #007bff;
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+
+.contact-info a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-info a :hover {
+      text-decoration: underline;
+  color: #007bff;
+}
+
+
